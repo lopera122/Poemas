@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poemas para mi Novia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #ff6f91;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            overflow-x: auto;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #d0e1f9;
+        }
+        .poema {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .poema:hover {
+            transform: scale(1.05);
+        }
+        .texto-poema {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Poemas para mi ti 🫶</h1>
+    <div class="menu">
+        <div class="poema" onclick="togglePoema('poema2')">📄</div>
+        <div class="poema" onclick="togglePoema('poema3')">📃</div>
+        <div class="poema" onclick="togglePoema('poema4')">📜</div>
+        <div class="poema" onclick="togglePoema('poema5')">📝</div>
+    </div>
+
+    <div id="poema1" class="texto-poema">"Eres como el sol, que ilumina mi ser, cada día contigo es un amanecer."</div>
+    <div id="poema2" class="texto-poema">"En tus ojos veo el cielo, un mar lleno de estrellas, tu risa es mi anhelo, mi vida es tan bella."</div>
+    <div id="poema3" class="texto-poema">"Tu amor es un río que nunca se seca, en cada latido, mi corazón te refleja."</div>
+    <div id="poema4" class="texto-poema">"Eres la melodía que suena en mi mente, un poema eterno, siempre presente."</div>
+    <div id="poema5" class="texto-poema">"Contigo aprendí lo que es la ternura, un abrazo tuyo es pura locura."</div>
+
+    <script>
+        function togglePoema(poemaId) {
+            const poema = document.getElementById(poemaId);
+            const isVisible = poema.style.display === 'block';
+            poema.style.display = isVisible ? 'none' : 'block';
+            poema.style.opacity = isVisible ? '0' : '1';
+        }
+    </script>
+
+</body>
+</html>
